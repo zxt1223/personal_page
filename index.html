@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>郑栩婷 · 个人主页（桌面版）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFAF7; --ink:#1A1A18; --ink-2:#3A3833; --muted:#6B6B66; --faint:#9A968D;
+  --terracotta:#B4543C; --peach:#E0A88C; --tag:#F0EBE3; --line:#DCD8CC; --card:#EDE8DF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',-apple-system,system-ui,sans-serif;background:#ECEAE6;display:flex;justify-content:center;padding:40px 0;}
+.page{width:1440px;background:var(--bg);overflow:hidden;}
+a{text-decoration:none;}
+
+/* Nav */
+.nav{height:72px;padding:0 64px;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-family:'Fraunces';font-weight:600;font-size:18px;color:var(--ink);}
+.nav-menu{display:flex;gap:32px;}
+.nav-menu a{font-size:15px;color:#4A4843;}
+.nav-menu a:hover{color:var(--ink);}
+.nav-btn{background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;}
+
+/* Hero */
+.hero{display:flex;gap:64px;padding:80px 64px;align-items:center;justify-content:space-between;}
+.hero-left{flex:1;display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
+.eyebrow{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.hero-name{font-family:'Fraunces';font-weight:700;font-size:72px;color:var(--ink);line-height:1.05;}
+.hero-tagline{font-family:'Fraunces';font-weight:400;font-size:22px;color:var(--ink-2);}
+.hero-bio{font-size:16px;color:var(--muted);line-height:26px;}
+.hero-cta{display:flex;gap:16px;align-items:center;}
+.cta-primary{background:var(--ink);color:var(--bg);padding:14px 28px;border-radius:999px;font-size:15px;font-weight:600;}
+.cta-secondary{background:#FFFFFF;border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:999px;font-size:15px;font-weight:600;}
+.hero-right{width:440px;height:540px;border-radius:24px;overflow:hidden;flex-shrink:0;}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* About */
+.about{display:flex;gap:64px;padding:64px;align-items:flex-start;}
+.about-left{width:320px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.about-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.about-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.about-right{flex:1;display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
+.about-text{font-size:18px;color:var(--ink-2);line-height:30px;}
+.skills{display:flex;flex-wrap:wrap;gap:12px;}
+.tag{background:var(--tag);color:#4A4843;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;}
+
+/* Work */
+.work{padding:64px;display:flex;flex-direction:column;gap:32px;}
+.work-header{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
+.work-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.work-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.work-grid{display:flex;gap:24px;}
+.proj{flex:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.proj-cover{width:100%;height:240px;border-radius:16px;overflow:hidden;background:var(--card);}
+.proj-cover img{width:100%;height:100%;object-fit:cover;display:block;}
+.proj-title{font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--ink);}
+.proj-meta{font-size:14px;color:var(--faint);}
+.proj-desc{font-size:15px;color:var(--muted);line-height:24px;}
+
+/* Contact */
+.contact{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;gap:24px;align-items:center;}
+.contact-kicker{font-size:13px;font-weight:600;color:var(--peach);letter-spacing:1px;}
+.contact-title{font-family:'Fraunces';font-weight:700;font-size:48px;color:var(--bg);}
+.contact-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;}
+.contact-item{font-size:18px;color:#D8D4CC;text-decoration:none;transition:color .2s;}
+.contact-item:hover{color:var(--peach);}
+
+/* Footer */
+.footer{display:flex;justify-content:space-between;align-items:center;padding:24px 64px;}
+.footer span{font-size:13px;color:var(--faint);}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="brand">郑栩婷</div>
+    <div class="nav-menu">
+      <a href="#work">作品</a>
+      <a href="#about">关于</a>
+      <a href="#">手记</a>
+      <a href="#contact">联系</a>
+    </div>
+    <a class="nav-btn" href="#contact">联系我</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">PRODUCT MANAGER · 产品经理</div>
+      <h1 class="hero-name">郑栩婷</h1>
+      <p class="hero-tagline">用产品思维拆解问题，把想法落地成可验证的方案。</p>
+      <p class="hero-bio">华东理工大学研一在读，正在寻找产品经理实习机会。关注用户痛点与商业价值之间的连接，相信好的产品从一次深入的访谈开始。</p>
+      <div class="hero-cta">
+        <a class="cta-primary" href="#work">查看作品</a>
+        <a class="cta-secondary" href="#">下载简历</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="assets/images/3_140.png" alt="郑栩婷">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-left">
+      <div class="about-kicker">ABOUT</div>
+      <h2 class="about-title">关于我</h2>
+    </div>
+    <div class="about-right">
+      <p class="about-text">本科阶段开始接触互联网产品，做过用户调研、需求文档和原型设计。现在华东理工大学读研，继续打磨产品思维与数据分析能力。喜欢从真实场景里找问题，也享受把复杂流程理清楚的成就感。</p>
+      <div class="skills">
+        <span class="tag">需求分析</span>
+        <span class="tag">用户调研</span>
+        <span class="tag">数据分析</span>
+        <span class="tag">原型设计</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="work" id="work">
+    <div class="work-header">
+      <div class="work-kicker">SELECTED WORK</div>
+      <h2 class="work-title">精选作品</h2>
+    </div>
+    <div class="work-grid">
+      <div class="proj">
+        <div class="proj-cover"><img src="assets/images/3_162.png" alt="校园服务平台产品方案"></div>
+        <h3 class="proj-title">校园服务平台产品方案</h3>
+        <div class="proj-meta">需求分析 · 原型设计 · 2025</div>
+        <p class="proj-desc">通过 32 位目标用户访谈，梳理出 3 个核心痛点，输出完整 PRD 与可交互原型。</p>
+      </div>
+      <div class="proj">
+        <div class="proj-cover"><img src="assets/images/3_167.png" alt="学习类 App 用户增长实验"></div>
+        <h3 class="proj-title">学习类 App 用户增长实验</h3>
+        <div class="proj-meta">数据分析 · A/B 测试 · 2024</div>
+        <p class="proj-desc">基于漏斗数据设计 2 组实验方案，验证注册转化率提升假设。</p>
+      </div>
+      <div class="proj">
+        <div class="proj-cover"><img src="assets/images/3_172.png" alt="电商小程序体验优化"></div>
+        <h3 class="proj-title">电商小程序体验优化</h3>
+        <div class="proj-meta">竞品分析 · 交互优化 · 2023</div>
+        <p class="proj-desc">拆解 5 款同类产品下单链路，提出 8 项优化建议并推动落地。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-kicker">LET'S TALK</div>
+    <h2 class="contact-title">一起做点东西？</h2>
+    <div class="contact-items">
+      <a class="contact-item" href="mailto:1281104218@qq.com">邮箱：1281104218@qq.com</a>
+      <a class="contact-item" href="https://github.com/zxt1223?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>© 2026 郑栩婷</span>
+    <span>GitHub</span>
+  </footer>
+
+</div>
+</body>
+</html>
