@@ -62,6 +62,17 @@ a{text-decoration:none;}
 .proj-meta{font-size:14px;color:var(--faint);}
 .proj-desc{font-size:15px;color:var(--muted);line-height:24px;}
 
+/* Featured project card */
+.proj-featured{width:100%;display:flex;flex-direction:column;gap:20px;background:var(--card);border-radius:20px;padding:28px;}
+.proj-featured-top{display:flex;gap:32px;align-items:flex-start;}
+.proj-featured-info{flex:1;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.proj-link{font-size:14px;color:var(--terracotta);font-weight:600;}
+.proj-link:hover{text-decoration:underline;}
+.proj-gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;}
+.proj-gallery img{height:260px;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;background:#E6E2DA;object-fit:cover;cursor:grab;}
+.proj-gallery::-webkit-scrollbar{height:6px;}
+.proj-gallery::-webkit-scrollbar-thumb{background:var(--faint);border-radius:3px;}
+
 /* Contact */
 .contact{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;gap:24px;align-items:center;}
 .contact-kicker{font-size:13px;font-weight:600;color:var(--peach);letter-spacing:1px;}
@@ -136,7 +147,7 @@ a{text-decoration:none;}
     <div class="stat"><div class="stat-num">32</div><div class="stat-label">用户深度访谈</div></div>
     <div class="stat"><div class="stat-num">8</div><div class="stat-label">优化建议落地</div></div>
     <div class="stat"><div class="stat-num">5</div><div class="stat-label">竞品链路拆解</div></div>
-    <div class="stat"><div class="stat-num">3</div><div class="stat-label">产品实战项目</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">产品实战项目</div></div>
   </section>
 
   <!-- About -->
@@ -224,6 +235,25 @@ a{text-decoration:none;}
       <div class="work-kicker">SELECTED WORK</div>
       <h2 class="work-title">精选作品</h2>
     </div>
+
+    <!-- Featured: 项目管家 -->
+    <div class="proj-featured">
+      <div class="proj-featured-top">
+        <div class="proj-featured-info">
+          <h3 class="proj-title">项目管家 · 项目管理智能体</h3>
+          <div class="proj-meta">AI Agent · 项目规划 · 风险预警 · 2026</div>
+          <p class="proj-desc">我主导设计的项目管理智能体，用七个串行 Skill 覆盖项目规划、拆解、分工、跟进、风险预警、自动汇报全流程。核心设计：风险判定走本地固化规则，大模型只生成整改文案，稳定可审计；配三层记忆与权限管控。已在部门落地并推广至全公司内部使用。</p>
+          <a class="proj-link" href="https://github.com/zxt1223/project-intelligent-agent" target="_blank" rel="noopener">查看 GitHub →</a>
+        </div>
+      </div>
+      <div class="proj-gallery">
+        <img src="assets/images/pa-01-flow.png" alt="执行流程：7 个 Skill 串行闭环">
+        <img src="assets/images/pa-02-output.png" alt="真实产出：项目进度广播">
+        <img src="assets/images/pa-03-output-detail.png" alt="真实产出：任务到期明细">
+        <img src="assets/images/pa-04-dashboard.png" alt="指标看板：北极星与效率指标">
+      </div>
+    </div>
+
     <div class="work-grid">
       <div class="proj">
         <div class="proj-cover"><img src="assets/images/3_162.png" alt="校园服务平台产品方案"></div>
