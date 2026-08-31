@@ -70,6 +70,30 @@ a{text-decoration:none;}
 .contact-item{font-size:18px;color:#D8D4CC;text-decoration:none;transition:color .2s;}
 .contact-item:hover{color:var(--peach);}
 
+/* Stats */
+.stats{display:flex;gap:24px;padding:0 64px 64px;}
+.stat{flex:1;background:var(--card);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+.stat-num{font-family:'Fraunces';font-weight:700;font-size:46px;color:var(--terracotta);line-height:1;}
+.stat-label{font-size:14px;color:var(--muted);}
+
+/* Skills matrix */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:100%;}
+.skill-col{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+.skill-cat{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.skill-desc{font-size:14px;color:var(--muted);line-height:22px;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+
+/* Timeline */
+.timeline-sec{padding:64px;display:flex;flex-direction:column;gap:32px;}
+.timeline{display:flex;flex-direction:column;border-left:2px solid var(--line);margin-left:8px;}
+.tl-item{display:flex;gap:24px;padding:0 0 32px 28px;position:relative;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--terracotta);border:2px solid var(--bg);}
+.tl-year{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink);min-width:120px;flex-shrink:0;}
+.tl-body{display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+.tl-h{font-family:'Fraunces';font-weight:700;font-size:18px;color:var(--ink);}
+.tl-d{font-size:15px;color:var(--muted);line-height:24px;}
+
 /* Footer */
 .footer{display:flex;justify-content:space-between;align-items:center;padding:24px 64px;}
 .footer span{font-size:13px;color:var(--faint);}
@@ -84,7 +108,7 @@ a{text-decoration:none;}
     <div class="nav-menu">
       <a href="#work">作品</a>
       <a href="#about">关于</a>
-      <a href="#">手记</a>
+      <a href="#journey">轨迹</a>
       <a href="#contact">联系</a>
     </div>
     <a class="nav-btn" href="#contact">联系我</a>
@@ -107,6 +131,14 @@ a{text-decoration:none;}
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat"><div class="stat-num">32</div><div class="stat-label">用户深度访谈</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">优化建议落地</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">竞品链路拆解</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">产品实战项目</div></div>
+  </section>
+
   <!-- About -->
   <section class="about" id="about">
     <div class="about-left">
@@ -115,11 +147,73 @@ a{text-decoration:none;}
     </div>
     <div class="about-right">
       <p class="about-text">本科阶段开始接触互联网产品，做过用户调研、需求文档和原型设计。现在华东理工大学读研，继续打磨产品思维与数据分析能力。喜欢从真实场景里找问题，也享受把复杂流程理清楚的成就感。</p>
-      <div class="skills">
-        <span class="tag">需求分析</span>
-        <span class="tag">用户调研</span>
-        <span class="tag">数据分析</span>
-        <span class="tag">原型设计</span>
+      <div class="skill-grid">
+        <div class="skill-col">
+          <div class="skill-cat">需求分析</div>
+          <p class="skill-desc">从用户访谈与竞品拆解中提炼核心痛点，输出结构化的 PRD。</p>
+          <div class="skill-tags"><span class="tag">需求分析</span><span class="tag">PRD</span><span class="tag">竞品分析</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">用户调研</div>
+          <p class="skill-desc">完成 32 位目标用户深度访谈，从真实场景里构建用户画像。</p>
+          <div class="skill-tags"><span class="tag">用户调研</span><span class="tag">用户访谈</span><span class="tag">问卷设计</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">数据分析</div>
+          <p class="skill-desc">基于漏斗数据拆解转化路径，设计 A/B 实验验证增长假设。</p>
+          <div class="skill-tags"><span class="tag">数据分析</span><span class="tag">漏斗分析</span><span class="tag">A/B 测试</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">原型设计</div>
+          <p class="skill-desc">产出高保真可交互原型，把抽象方案讲清楚、可验证。</p>
+          <div class="skill-tags"><span class="tag">原型设计</span><span class="tag">交互优化</span><span class="tag">高保真原型</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey / Timeline -->
+  <section class="timeline-sec" id="journey">
+    <div class="work-header">
+      <div class="work-kicker">JOURNEY</div>
+      <h2 class="work-title">成长轨迹</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">2025 — 至今</div>
+        <div class="tl-body">
+          <div class="tl-h">华东理工大学 · 硕士在读</div>
+          <div class="tl-d">产品方向，持续打磨产品思维与数据分析能力，正在寻找产品经理实习机会。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-body">
+          <div class="tl-h">校园服务平台产品方案</div>
+          <div class="tl-d">32 位用户访谈 → 3 大核心痛点 → 完整 PRD 与可交互原型。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-body">
+          <div class="tl-h">学习类 App 用户增长实验</div>
+          <div class="tl-d">基于漏斗数据设计 2 组 A/B 实验，验证注册转化率提升假设。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2023</div>
+        <div class="tl-body">
+          <div class="tl-h">电商小程序体验优化</div>
+          <div class="tl-d">拆解 5 款同类产品下单链路，提出并落地 8 项优化建议。</div>
+        </div>
+      </div>
+      <!-- TODO: 补充本科学校与专业，以及任何实习/工作经历 -->
+      <div class="tl-item">
+        <div class="tl-year">2021 — 2025</div>
+        <div class="tl-body">
+          <div class="tl-h">本科 · 互联网产品入门</div>
+          <div class="tl-d">本科阶段开始接触互联网产品，做过用户调研、需求文档与原型设计。（待补充学校与专业）</div>
+        </div>
       </div>
     </div>
   </section>
