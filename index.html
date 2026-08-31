@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1440">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>郑栩婷 · 个人主页（桌面版）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +11,12 @@
 :root{
   --bg:#FBFAF7; --ink:#1A1A18; --ink-2:#3A3833; --muted:#6B6B66; --faint:#9A968D;
   --terracotta:#B4543C; --peach:#E0A88C; --tag:#F0EBE3; --line:#DCD8CC; --card:#EDE8DF;
+  --muted:#56544E;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Outfit',-apple-system,system-ui,sans-serif;background:#ECEAE6;display:flex;justify-content:center;padding:40px 0;}
-.page{width:1440px;background:var(--bg);overflow:hidden;}
+.page{width:100%;max-width:1120px;background:var(--bg);overflow:hidden;margin:0 auto;}
 a{text-decoration:none;}
 
 /* Nav */
@@ -32,7 +33,7 @@ a{text-decoration:none;}
 .eyebrow{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
 .hero-name{font-family:'Fraunces';font-weight:700;font-size:72px;color:var(--ink);line-height:1.05;}
 .hero-tagline{font-family:'Fraunces';font-weight:400;font-size:22px;color:var(--ink-2);}
-.hero-bio{font-size:16px;color:var(--muted);line-height:26px;}
+.hero-bio{font-size:16px;color:var(--muted);line-height:26px;max-width:540px;}
 .hero-cta{display:flex;gap:16px;align-items:center;}
 .cta-primary{background:var(--ink);color:var(--bg);padding:14px 28px;border-radius:999px;font-size:15px;font-weight:600;}
 .cta-secondary{background:#FFFFFF;border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:999px;font-size:15px;font-weight:600;}
@@ -45,7 +46,7 @@ a{text-decoration:none;}
 .about-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
 .about-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
 .about-right{flex:1;display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
-.about-text{font-size:18px;color:var(--ink-2);line-height:30px;}
+.about-text{font-size:18px;color:var(--ink-2);line-height:30px;font-weight:500;max-width:620px;}
 .skills{display:flex;flex-wrap:wrap;gap:12px;}
 .tag{background:var(--tag);color:#4A4843;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;}
 
@@ -80,7 +81,7 @@ a{text-decoration:none;}
 .contact-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;}
 .contact-item{font-size:18px;color:#D8D4CC;text-decoration:none;transition:color .2s;}
 .contact-item:hover{color:var(--peach);}
-.contact-sub{font-size:16px;color:#D8D4CC;}
+.contact-sub{font-size:16px;color:#D8D4CC;max-width:560px;text-align:center;}
 
 /* Stats */
 .stats{display:flex;gap:24px;padding:0 64px 64px;}
@@ -92,7 +93,7 @@ a{text-decoration:none;}
 .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:100%;}
 .skill-col{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
 .skill-cat{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.skill-desc{font-size:14px;color:var(--muted);line-height:22px;}
+.skill-desc{font-size:15px;color:var(--muted);line-height:24px;}
 .skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
 
 /* Timeline */
@@ -104,7 +105,7 @@ a{text-decoration:none;}
 .tl-year{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink);min-width:120px;flex-shrink:0;}
 .tl-body{display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
 .tl-h{font-family:'Fraunces';font-weight:700;font-size:18px;color:var(--ink);}
-.tl-d{font-size:15px;color:var(--muted);line-height:24px;}
+.tl-d{font-size:16px;color:var(--muted);line-height:26px;max-width:720px;}
 .tl-link{color:var(--terracotta);font-weight:600;}.tl-link:hover{text-decoration:underline;}
 
 /* Footer */
