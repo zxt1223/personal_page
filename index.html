@@ -62,6 +62,7 @@ a{text-decoration:none;}
 .proj-title{font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--ink);}
 .proj-meta{font-size:14px;color:var(--faint);}
 .proj-desc{font-size:15px;color:var(--muted);line-height:24px;}
+.proj-desc strong{color:var(--ink);font-weight:600;}
 
 /* Featured project card */
 .proj-featured{width:100%;display:flex;flex-direction:column;gap:20px;background:var(--card);border-radius:20px;padding:28px;}
@@ -165,7 +166,7 @@ a{text-decoration:none;}
     <div class="stat"><div class="stat-num">200+</div><div class="stat-label">深度访谈样本</div></div>
     <div class="stat"><div class="stat-num">3</div><div class="stat-label">类 AI Agent 实战</div></div>
     <div class="stat"><div class="stat-num">14,000+</div><div class="stat-label">条数据清洗</div></div>
-    <div class="stat"><div class="stat-num">2</div><div class="stat-label">产品实战项目</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">产品实战项目</div></div>
   </section>
 
   <!-- About -->
@@ -290,7 +291,7 @@ a{text-decoration:none;}
         <div class="proj-featured-info">
           <h3 class="proj-title">项目管家 · 项目管理智能体</h3>
           <div class="proj-meta">AI Agent · 项目规划 · 风险预警 · 2026</div>
-          <p class="proj-desc">我主导设计的项目管理智能体，用七个串行 Skill 覆盖项目规划、拆解、分工、跟进、风险预警、自动汇报全流程。核心设计：风险判定走本地固化规则，大模型只生成整改文案，稳定可审计；配三层记忆与权限管控。已在部门落地并推广至全公司内部使用，每天早 9 点自动推送任务进度广播，覆盖 60+ 项任务。</p>
+          <p class="proj-desc">我主导设计的项目管理智能体，用<strong>七个串行 Skill</strong> 覆盖项目规划、拆解、分工、跟进、风险预警、自动汇报全流程。核心设计：<strong>风险判定走本地固化规则</strong>，大模型只生成整改文案，稳定可审计；配<strong>三层记忆与权限管控</strong>。已在部门落地并推广至全公司内部使用，每天早 9 点自动推送任务进度广播，覆盖 <strong>60+ 项任务</strong>。</p>
           <a class="proj-link" href="https://github.com/zxt1223/project-intelligent-agent" target="_blank" rel="noopener">查看 GitHub →</a>
         </div>
       </div>
@@ -308,7 +309,7 @@ a{text-decoration:none;}
         <div class="proj-featured-info">
           <h3 class="proj-title">AI 智能导购 · 美妆电商导购 Agent</h3>
           <div class="proj-meta">AI Agent · 电商导购 · 规则引擎 · 评测闭环</div>
-          <p class="proj-desc">以产品思维贯穿的电商美妆导购 Agent。从「选色号难、怕踩雷、怕花冤枉钱」的真实用户痛点出发，设计「确定性规则 + LLM 兜底」分层架构——规则引擎毫秒级零成本，LLM 只补规则盲区，配意图闸门、会话记忆与护栏，让 AI 像真人导购一样理解上下文。商业化上，报价与优惠由代码从库生成、模型只填约束，从架构上杜绝资损；用 41 道真实评论抽取的评测题 + 三层指标 + A/B 实验闭环迭代，首答命中率 94.7%、合规 105/105。每个环节都是产品决策。</p>
+          <p class="proj-desc">以产品思维贯穿的电商美妆导购 Agent。从「选色号难、怕踩雷、怕花冤枉钱」的真实用户痛点出发，设计<strong>「确定性规则 + LLM 兜底」分层架构</strong>——规则引擎毫秒级零成本，LLM 只补规则盲区，配<strong>意图闸门、会话记忆与护栏</strong>，让 AI 像真人导购一样理解上下文。商业化上，<strong>报价与优惠由代码从库生成</strong>、模型只填约束，从架构上杜绝资损；用 <strong>41 道真实评论抽取的评测题</strong> + 三层指标 + A/B 实验闭环迭代，<strong>首答命中率 94.7%、合规 105/105</strong>。每个环节都是产品决策。</p>
           <!-- TODO: 补 GitHub 链接 -->
           <a class="proj-link" href="https://github.com/zxt1223/AI-beauty-agent" target="_blank" rel="noopener">查看 GitHub →</a>
         </div>
@@ -317,6 +318,23 @@ a{text-decoration:none;}
         <img class="zoomable" data-group="ba" src="assets/images/ba-01-preference.png" alt="偏好收集：肤质/预算/妆效">
         <img class="zoomable" data-group="ba" src="assets/images/ba-02-shade.png" alt="色号咨询：冷暖皮判断">
         <img class="zoomable" data-group="ba" src="assets/images/ba-03-recommend.png" alt="智能推荐：多轮对话后生成推荐">
+      </div>
+    </div>
+
+    <!-- Featured: PM 成长工作台 -->
+    <div class="proj-featured">
+      <div class="proj-featured-top">
+        <div class="proj-featured-info">
+          <h3 class="proj-title">PM 成长工作台 · 个人成长操作系统</h3>
+          <div class="proj-meta">全栈产品 · 岗位情报聚合 · 可视化看板 · 自动化日报</div>
+          <p class="proj-desc">一个"个人成长操作系统"，将分散的招聘官网、飞书岗位、经验文档、AI 资讯与每日任务聚合成统一入口，并用可视化看板把岗位情报、任务进度与成长轨迹一目了然地呈现。<strong>自动同步 11 家大厂/外企官网岗位</strong>，按<strong>"公司+岗位"双维度</strong>沉淀可复用经验，还能基于看板数据自动生成日报与周报。产品思维上，以<strong>"采集—结构化—可视化—主动触达"</strong>的闭环替代手工记录；创新性在于以单人极低成本搭起一套自运转的岗位情报与成长管理系统，而非被动刷招聘软件。</p>
+          <a class="proj-link" href="https://github.com/zxt1223/pm-growth-workspace" target="_blank" rel="noopener">查看 GitHub →</a>
+        </div>
+      </div>
+      <div class="proj-gallery">
+        <img class="zoomable" data-group="pm" src="assets/images/pm-01-taskboard.png" alt="任务管理与日报看板">
+        <img class="zoomable" data-group="pm" src="assets/images/pm-02-tools.png" alt="工具应用与 AI 资讯聚合">
+        <img class="zoomable" data-group="pm" src="assets/images/pm-03-jobs.png" alt="求职贴岗位情报聚合">
       </div>
     </div>
 
