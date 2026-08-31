@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=390">
-<title>郑栩婷 · 个人主页（手机版）</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>郑栩婷 · 个人主页（桌面版）</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,60 +11,121 @@
 :root{
   --bg:#FBFAF7; --ink:#1A1A18; --ink-2:#3A3833; --muted:#6B6B66; --faint:#9A968D;
   --terracotta:#B4543C; --peach:#E0A88C; --tag:#F0EBE3; --line:#DCD8CC; --card:#EDE8DF;
+  --muted:#56544E;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',-apple-system,system-ui,sans-serif;background:#2B2B2B;display:flex;justify-content:center;padding:40px 0;}
-.page{width:390px;background:var(--bg);overflow:hidden;}
+body{font-family:'Outfit',-apple-system,system-ui,sans-serif;background:#ECEAE6;display:flex;justify-content:center;padding:40px 0;}
+.page{width:100%;max-width:1120px;background:var(--bg);overflow:hidden;margin:0 auto;}
 a{text-decoration:none;}
 
 /* Nav */
-.nav{height:60px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
-.brand{font-family:'Fraunces';font-weight:600;font-size:17px;color:var(--ink);}
-.nav-btn{background:var(--ink);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;}
+.nav{height:72px;padding:0 64px;display:flex;align-items:center;justify-content:space-between;}
+.brand{font-family:'Fraunces';font-weight:600;font-size:18px;color:var(--ink);}
+.nav-menu{display:flex;gap:32px;}
+.nav-menu a{font-size:15px;color:#4A4843;}
+.nav-menu a:hover{color:var(--ink);}
+.nav-btn{background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;}
 
 /* Hero */
-.hero{padding:32px 20px;display:flex;flex-direction:column;gap:20px;align-items:flex-start;}
-.hero-img{width:100%;height:300px;border-radius:20px;overflow:hidden;}
-.hero-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.eyebrow{font-size:12px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.hero-name{font-family:'Fraunces';font-weight:700;font-size:40px;color:var(--ink);}
-.hero-tagline{font-family:'Fraunces';font-weight:400;font-size:18px;color:var(--ink-2);line-height:28px;}
-.hero-bio{font-size:14px;color:var(--muted);line-height:22px;}
-.hero-cta{display:flex;gap:12px;align-items:center;}
-.cta-primary{background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:999px;font-size:14px;font-weight:600;}
-.cta-secondary{background:#FFFFFF;border:1px solid var(--line);color:var(--ink);padding:12px 22px;border-radius:999px;font-size:14px;font-weight:600;}
+.hero{display:flex;gap:48px;padding:56px 64px;align-items:center;justify-content:space-between;}
+.hero-left{flex:1;display:flex;flex-direction:column;gap:20px;align-items:flex-start;}
+.eyebrow{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.hero-name{font-family:'Fraunces';font-weight:700;font-size:60px;color:var(--ink);line-height:1.05;}
+.hero-tagline{font-family:'Fraunces';font-weight:400;font-size:20px;color:var(--ink-2);}
+.hero-bio{font-size:16px;color:var(--muted);line-height:26px;max-width:540px;}
+.hero-cta{display:flex;gap:16px;align-items:center;}
+.cta-primary{background:var(--ink);color:var(--bg);padding:12px 24px;border-radius:999px;font-size:14px;font-weight:600;}
+.cta-secondary{background:#FFFFFF;border:1px solid var(--line);color:var(--ink);padding:12px 24px;border-radius:999px;font-size:14px;font-weight:600;}
+.hero-right{width:360px;height:440px;border-radius:20px;overflow:hidden;flex-shrink:0;}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* About */
-.about{padding:32px 20px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
-.about-title{font-family:'Fraunces';font-weight:700;font-size:24px;color:var(--ink);}
-.about-text{font-size:15px;color:var(--ink-2);line-height:24px;}
-.skills{display:flex;flex-wrap:wrap;gap:8px;}
-.tag{background:var(--tag);color:#4A4843;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:500;}
+.about{display:flex;gap:64px;padding:64px;align-items:flex-start;}
+.about-left{width:320px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.about-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.about-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.about-right{flex:1;display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
+.about-text{font-size:18px;color:var(--ink-2);line-height:30px;font-weight:500;max-width:620px;}
+.skills{display:flex;flex-wrap:wrap;gap:12px;}
+.tag{background:var(--tag);color:#4A4843;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;}
 
 /* Work */
-.work{padding:32px 20px;display:flex;flex-direction:column;gap:20px;}
-.work-header{display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
-.work-kicker{font-size:12px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.work-title{font-family:'Fraunces';font-weight:700;font-size:24px;color:var(--ink);}
-.proj{display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
-.proj-cover{width:100%;height:200px;border-radius:14px;overflow:hidden;background:var(--card);}
+.work{padding:64px;display:flex;flex-direction:column;gap:32px;}
+.work-header{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
+.work-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.work-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.work-grid{display:flex;gap:24px;}
+.proj{flex:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
+.proj-cover{width:100%;height:240px;border-radius:16px;overflow:hidden;background:var(--card);}
 .proj-cover img{width:100%;height:100%;object-fit:cover;display:block;}
-.proj-title{font-family:'Fraunces';font-weight:700;font-size:18px;color:var(--ink);}
-.proj-meta{font-size:13px;color:var(--faint);}
-.proj-desc{font-size:14px;color:var(--muted);line-height:22px;}
+.proj-title{font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--ink);}
+.proj-meta{font-size:14px;color:var(--faint);}
+.proj-desc{font-size:15px;color:var(--muted);line-height:24px;}
+
+/* Featured project card */
+.proj-featured{width:100%;display:flex;flex-direction:column;gap:20px;background:var(--card);border-radius:20px;padding:28px;}
+.proj-featured-top{display:flex;gap:32px;align-items:flex-start;}
+.proj-featured-info{flex:1;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
+.proj-link{font-size:14px;color:var(--terracotta);font-weight:600;}
+.proj-link:hover{text-decoration:underline;}
+.proj-gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;}
+.proj-gallery img{height:260px;flex:0 0 auto;scroll-snap-align:start;border-radius:12px;background:#E6E2DA;object-fit:cover;cursor:zoom-in;}
+.proj-gallery::-webkit-scrollbar{height:6px;}
+.proj-gallery::-webkit-scrollbar-thumb{background:var(--faint);border-radius:3px;}
 
 /* Contact */
-.contact{background:var(--ink);padding:40px 20px;display:flex;flex-direction:column;gap:16px;align-items:center;}
-.contact-kicker{font-size:12px;font-weight:600;color:var(--peach);letter-spacing:1px;}
-.contact-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--bg);}
-.contact-items{display:flex;flex-direction:column;align-items:center;gap:14px;}
-.contact-item{font-size:15px;color:#D8D4CC;text-decoration:none;}
+.contact{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;gap:24px;align-items:center;}
+.contact-kicker{font-size:13px;font-weight:600;color:var(--peach);letter-spacing:1px;}
+.contact-title{font-family:'Fraunces';font-weight:700;font-size:48px;color:var(--bg);}
+.contact-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;}
+.contact-item{font-size:18px;color:#D8D4CC;text-decoration:none;transition:color .2s;}
 .contact-item:hover{color:var(--peach);}
+.contact-sub{font-size:16px;color:#D8D4CC;max-width:560px;text-align:center;}
+
+/* Stats */
+.stats{display:flex;gap:24px;padding:0 64px 64px;}
+.stat{flex:1;background:var(--card);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+.stat-num{font-family:'Fraunces';font-weight:700;font-size:46px;color:var(--terracotta);line-height:1;}
+.stat-label{font-size:14px;color:var(--muted);}
+
+/* Skills matrix */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:100%;}
+.skill-col{display:flex;flex-direction:column;gap:10px;align-items:flex-start;}
+.skill-cat{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
+.skill-desc{font-size:15px;color:var(--muted);line-height:24px;}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+
+/* Timeline */
+.timeline-sec{padding:64px;display:flex;flex-direction:column;gap:32px;}
+.timeline{display:flex;flex-direction:column;border-left:2px solid var(--line);margin-left:8px;}
+.tl-item{display:flex;gap:24px;padding:0 0 32px 28px;position:relative;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--terracotta);border:2px solid var(--bg);}
+.tl-year{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink);min-width:120px;flex-shrink:0;}
+.tl-body{display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+.tl-h{font-family:'Fraunces';font-weight:700;font-size:18px;color:var(--ink);}
+.tl-d{font-size:16px;color:var(--muted);line-height:26px;max-width:720px;}
+.tl-link{color:var(--terracotta);font-weight:600;}.tl-link:hover{text-decoration:underline;}
 
 /* Footer */
-.footer{display:flex;justify-content:space-between;align-items:center;padding:20px;}
-.footer span{font-size:12px;color:var(--faint);}
+.footer{display:flex;justify-content:space-between;align-items:center;padding:24px 64px;}
+.footer span{font-size:13px;color:var(--faint);}
+
+/* Lightbox 图片点击放大 */
+.zoomable{cursor:zoom-in;transition:filter .2s;}
+.zoomable:hover{filter:brightness(.97);}
+.lightbox{position:fixed;inset:0;background:rgba(20,18,16,.92);display:none;align-items:center;justify-content:center;z-index:9999;padding:32px;opacity:0;transition:opacity .2s;}
+.lightbox.open{display:flex;opacity:1;}
+.lightbox img{max-width:92vw;max-height:86vh;object-fit:contain;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55);background:#fff;}
+.lb-close{position:absolute;top:18px;right:26px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;transition:background .2s;}
+.lb-close:hover{background:rgba(255,255,255,.28);}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:30px;line-height:1;cursor:pointer;transition:background .2s;}
+.lb-nav:hover{background:rgba(255,255,255,.28);}
+.lb-prev{left:24px;}
+.lb-next{right:24px;}
+.lb-count{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;letter-spacing:1px;opacity:.85;}
+@media(max-width:640px){.lb-prev{left:10px;}.lb-next{right:10px;}.lightbox{padding:16px;}}
 </style>
 </head>
 <body>
@@ -73,31 +134,146 @@ a{text-decoration:none;}
   <!-- Nav -->
   <nav class="nav">
     <div class="brand">郑栩婷</div>
-    <a class="nav-btn" href="#contact">联系</a>
+    <div class="nav-menu">
+      <a href="#work">作品</a>
+      <a href="#about">关于</a>
+      <a href="#journey">轨迹</a>
+      <a href="#contact">联系</a>
+    </div>
+    <a class="nav-btn" href="#contact">联系我</a>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-img"><img src="assets/images/3_195.png" alt="郑栩婷"></div>
-    <div class="eyebrow">PRODUCT MANAGER</div>
-    <h1 class="hero-name">郑栩婷</h1>
-    <p class="hero-tagline">用产品思维拆解问题，把想法落地成可验证的方案。</p>
-    <p class="hero-bio">华东理工大学研一在读，寻找产品经理实习机会。关注用户痛点与商业价值之间的连接。</p>
-    <div class="hero-cta">
-      <a class="cta-primary" href="#work">查看作品</a>
-      <a class="cta-secondary" href="#">简历</a>
+    <div class="hero-left">
+      <div class="eyebrow">PRODUCT MANAGER · 产品经理</div>
+      <h1 class="hero-name">郑栩婷</h1>
+      <p class="hero-tagline">用产品思维拆解问题，把想法落地成可验证的方案。</p>
+      <p class="hero-bio">华东理工大学应用统计硕士在读，具备数据分析与 AI Agent 设计能力，实习六个月及以上、随时到岗。关注用户痛点与商业价值之间的连接，相信好的产品从一次深入的访谈开始。</p>
+      <div class="hero-cta">
+        <a class="cta-primary" href="#work">查看作品</a>
+        <a class="cta-secondary" href="assets/resume.pdf" download>下载简历</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img class="zoomable" data-group="hero" src="assets/images/3_140.png" alt="郑栩婷">
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat"><div class="stat-num">200+</div><div class="stat-label">深度访谈样本</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">类 AI Agent 实战</div></div>
+    <div class="stat"><div class="stat-num">14,000+</div><div class="stat-label">条数据清洗</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">产品实战项目</div></div>
+  </section>
+
   <!-- About -->
-  <section class="about">
-    <h2 class="about-title">关于我</h2>
-    <p class="about-text">本科阶段接触互联网产品，做过用户调研、需求文档和原型设计。现在华东理工大学读研，继续打磨产品思维与数据分析能力。</p>
-    <div class="skills">
-      <span class="tag">需求分析</span>
-      <span class="tag">用户调研</span>
-      <span class="tag">数据分析</span>
-      <span class="tag">原型设计</span>
+  <section class="about" id="about">
+    <div class="about-left">
+      <div class="about-kicker">ABOUT</div>
+      <h2 class="about-title">关于我</h2>
+    </div>
+    <div class="about-right">
+      <p class="about-text">本科阶段开始接触互联网产品，做过用户调研、需求文档和原型设计。现在华东理工大学读研，继续打磨产品思维与数据分析能力。喜欢从真实场景里找问题，也享受把复杂流程理清楚的成就感。</p>
+      <div class="skill-grid">
+        <div class="skill-col">
+          <div class="skill-cat">需求分析</div>
+          <p class="skill-desc">从用户访谈与竞品拆解中提炼核心痛点，输出结构化的 PRD。</p>
+          <div class="skill-tags"><span class="tag">需求分析</span><span class="tag">PRD</span><span class="tag">竞品分析</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">用户调研</div>
+          <p class="skill-desc">完成近 200 人次深度访谈、800 份问卷投放，从真实场景里提炼用户画像与消费动机。</p>
+          <div class="skill-tags"><span class="tag">用户调研</span><span class="tag">用户访谈</span><span class="tag">问卷设计</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">数据分析</div>
+          <p class="skill-desc">基于漏斗数据拆解转化路径，设计 A/B 实验验证增长假设。</p>
+          <div class="skill-tags"><span class="tag">数据分析</span><span class="tag">漏斗分析</span><span class="tag">A/B 测试</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">原型设计</div>
+          <p class="skill-desc">产出高保真可交互原型，把抽象方案讲清楚、可验证。</p>
+          <div class="skill-tags"><span class="tag">原型设计</span><span class="tag">交互优化</span><span class="tag">高保真原型</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">数据工具</div>
+          <p class="skill-desc">用数据支撑决策：SQL 取数、Excel 透视分析、Python 做基础数据分析。</p>
+          <div class="skill-tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Python</span></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-cat">AI 能力</div>
+          <p class="skill-desc">Agent 全流程设计：ReAct 架构、LangGraph 工作流编排，理解模型能力边界。</p>
+          <div class="skill-tags"><span class="tag">Agent 设计</span><span class="tag">LangGraph</span><span class="tag">ReAct</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey / Timeline -->
+  <section class="timeline-sec" id="journey">
+    <div class="work-header">
+      <div class="work-kicker">JOURNEY</div>
+      <h2 class="work-title">成长轨迹</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">2025.09 — 至今</div>
+        <div class="tl-body">
+          <div class="tl-h">华东理工大学 · 应用统计 硕士</div>
+          <div class="tl-d">GPA 3.5/4；数值最优化(100)、高等数理统计(96) 等。产品经理方向，持续打磨数据分析与 AI 能力。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2026.03 — 07</div>
+        <div class="tl-body">
+          <div class="tl-h">达观数据 · 后端开发（数据方向）实习</div>
+          <div class="tl-d">统计报表模块：梳理 200+ 指标字段口径，设计累加/加权/去重 3 类聚合规则覆盖 38 个比率指标，打通"接入→计算→接口→报表"全链路。智能排障 Agent：基于 LangGraph 编排 5 个诊断工具，覆盖 3 类高频故障，人工排查从 1 小时缩短至 15 分钟。并主导设计项目管理智能体「项目管家」（详见 <a class="tl-link" href="#work">精选作品</a>）。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025.03 — 05</div>
+        <div class="tl-body">
+          <div class="tl-h">新质生产力对区域碳排放的影响研究 · 论文一等奖</div>
+          <div class="tl-d">个人作者。构建 21 个底层指标评价体系，熵权法客观赋权，面板固定效应模型推断因果效应，为差异化减排政策提供量化依据。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024.03 — 06</div>
+        <div class="tl-body">
+          <div class="tl-h">量化交易策略研究 · 大商所「百年万才」三等奖学金</div>
+          <div class="tl-d">个人作者。清洗 14,000+ 条天然橡胶期货日频数据，ARIMA(1,1,2) 预测误差 1.21%（MAPE 2.43%），基于 3σ 原则的五级价格波动预警使风险识别灵敏度提升 18%。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2023.07 — 08</div>
+        <div class="tl-body">
+          <div class="tl-h">中国家庭金融调查与研究中心 · 访问督导</div>
+          <div class="tl-d">对接东北 6 个市县级社区，完成近 200 人次深度访谈、10000+ 条一手数据；所在团队以大区最少人力率先完成任务，获第一名。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2022.11 — 2023.05</div>
+        <div class="tl-body">
+          <div class="tl-h">马面裙消费市场调研与用户行为分析 · 队长</div>
+          <div class="tl-d">投放 800 份问卷、10000+ 条数据，Python 聚类划分 4 类用户；提出"种草 + 折扣"组合策略，预期转化率提升 15%。获正大杯市场调研大赛天津市二等奖。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2021.08 — 2025.06</div>
+        <div class="tl-body">
+          <div class="tl-h">天津财经大学 · 金融工程 本科</div>
+          <div class="tl-d">GPA 3.7/4（前 10%），多次校级奖学金，优秀毕业生。主修高等数学、概率统计、计量经济学、金融数据分析与建模等。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">荣誉</div>
+        <div class="tl-body">
+          <div class="tl-h">竞赛 / 学术奖项 & 证书</div>
+          <div class="tl-d">竞赛：第 16 届全国数学竞赛一等奖、第 13 届市场调查与分析大赛天津市二等奖。学术：王荫乔张平王国泰论文奖"潜力奖"一等奖、大商所"百年万才"三等奖学金、校级奖学金。证书：英语六级。</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -107,31 +283,52 @@ a{text-decoration:none;}
       <div class="work-kicker">SELECTED WORK</div>
       <h2 class="work-title">精选作品</h2>
     </div>
-    <div class="proj">
-      <div class="proj-cover"><img src="assets/images/3_222.png" alt="校园服务平台产品方案"></div>
-      <h3 class="proj-title">校园服务平台产品方案</h3>
-      <div class="proj-meta">需求分析 · 原型设计 · 2025</div>
-      <p class="proj-desc">通过 32 位目标用户访谈，梳理出 3 个核心痛点，输出完整 PRD 与可交互原型。</p>
+
+    <!-- Featured: 项目管家 -->
+    <div class="proj-featured">
+      <div class="proj-featured-top">
+        <div class="proj-featured-info">
+          <h3 class="proj-title">项目管家 · 项目管理智能体</h3>
+          <div class="proj-meta">AI Agent · 项目规划 · 风险预警 · 2026</div>
+          <p class="proj-desc">我主导设计的项目管理智能体，用七个串行 Skill 覆盖项目规划、拆解、分工、跟进、风险预警、自动汇报全流程。核心设计：风险判定走本地固化规则，大模型只生成整改文案，稳定可审计；配三层记忆与权限管控。已在部门落地并推广至全公司内部使用，每天早 9 点自动推送任务进度广播，覆盖 60+ 项任务。</p>
+          <a class="proj-link" href="https://github.com/zxt1223/project-intelligent-agent" target="_blank" rel="noopener">查看 GitHub →</a>
+        </div>
+      </div>
+      <div class="proj-gallery">
+        <img class="zoomable" data-group="pa" src="assets/images/pa-01-flow.png" alt="执行流程：7 个 Skill 串行闭环">
+        <img class="zoomable" data-group="pa" src="assets/images/pa-02-output.png" alt="真实产出：项目进度广播">
+        <img class="zoomable" data-group="pa" src="assets/images/pa-03-output-detail.png" alt="真实产出：任务到期明细">
+        <img class="zoomable" data-group="pa" src="assets/images/pa-04-dashboard.png" alt="指标看板：北极星与效率指标">
+      </div>
     </div>
-    <div class="proj">
-      <div class="proj-cover"><img src="assets/images/3_227.png" alt="学习类 App 用户增长实验"></div>
-      <h3 class="proj-title">学习类 App 用户增长实验</h3>
-      <div class="proj-meta">数据分析 · A/B 测试 · 2024</div>
-      <p class="proj-desc">基于漏斗数据设计 2 组实验方案，验证注册转化率提升假设。</p>
+
+    <!-- Featured: AI 智能导购 -->
+    <div class="proj-featured">
+      <div class="proj-featured-top">
+        <div class="proj-featured-info">
+          <h3 class="proj-title">AI 智能导购 · 美妆电商导购 Agent</h3>
+          <div class="proj-meta">AI Agent · 电商导购 · 规则引擎 · 评测闭环</div>
+          <p class="proj-desc">以产品思维贯穿的电商美妆导购 Agent。从「选色号难、怕踩雷、怕花冤枉钱」的真实用户痛点出发，设计「确定性规则 + LLM 兜底」分层架构——规则引擎毫秒级零成本，LLM 只补规则盲区，配意图闸门、会话记忆与护栏，让 AI 像真人导购一样理解上下文。商业化上，报价与优惠由代码从库生成、模型只填约束，从架构上杜绝资损；用 41 道真实评论抽取的评测题 + 三层指标 + A/B 实验闭环迭代，首答命中率 94.7%、合规 105/105。每个环节都是产品决策。</p>
+          <!-- TODO: 补 GitHub 链接 -->
+          <a class="proj-link" href="https://github.com/zxt1223/AI-beauty-agent" target="_blank" rel="noopener">查看 GitHub →</a>
+        </div>
+      </div>
+      <div class="proj-gallery">
+        <img class="zoomable" data-group="ba" src="assets/images/ba-01-preference.png" alt="偏好收集：肤质/预算/妆效">
+        <img class="zoomable" data-group="ba" src="assets/images/ba-02-shade.png" alt="色号咨询：冷暖皮判断">
+        <img class="zoomable" data-group="ba" src="assets/images/ba-03-recommend.png" alt="智能推荐：多轮对话后生成推荐">
+      </div>
     </div>
-    <div class="proj">
-      <div class="proj-cover"><img src="assets/images/3_232.png" alt="电商小程序体验优化"></div>
-      <h3 class="proj-title">电商小程序体验优化</h3>
-      <div class="proj-meta">竞品分析 · 交互优化 · 2023</div>
-      <p class="proj-desc">拆解 5 款同类产品下单链路，提出 8 项优化建议并推动落地。</p>
-    </div>
+
   </section>
 
   <!-- Contact -->
   <section class="contact" id="contact">
     <div class="contact-kicker">LET'S TALK</div>
     <h2 class="contact-title">一起做点东西？</h2>
+    <p class="contact-sub">求职意向：产品经理 · 上海 · 随时到岗</p>
     <div class="contact-items">
+      <a class="contact-item" href="tel:13640433923">电话：13640433923</a>
       <a class="contact-item" href="mailto:1281104218@qq.com">邮箱：1281104218@qq.com</a>
       <a class="contact-item" href="https://github.com/zxt1223?tab=repositories" target="_blank" rel="noopener">GitHub</a>
     </div>
@@ -144,5 +341,26 @@ a{text-decoration:none;}
   </footer>
 
 </div>
+<script>
+(function(){
+  var imgs=Array.prototype.slice.call(document.querySelectorAll('img.zoomable'));
+  if(!imgs.length)return;
+  var lb=document.createElement('div');lb.className='lightbox';
+  lb.innerHTML='<button class="lb-close" aria-label="关闭">&times;</button><button class="lb-nav lb-prev" aria-label="上一张">&#8249;</button><button class="lb-nav lb-next" aria-label="下一张">&#8250;</button><img alt=""><div class="lb-count"></div>';
+  document.body.appendChild(lb);
+  var lbImg=lb.querySelector('img'),lbCount=lb.querySelector('.lb-count'),group=[],idx=0;
+  function render(){var g=group[idx];lbImg.src=g.src;lbImg.alt=g.alt;lbCount.textContent=group.length>1?(idx+1)+' / '+group.length:'';}
+  function open(t){group=imgs.filter(function(im){return im.getAttribute('data-group')===t.getAttribute('data-group');});idx=group.indexOf(t);if(idx<0)idx=0;lb.classList.add('open');document.body.style.overflow='hidden';render();}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  function prev(){idx=(idx-1+group.length)%group.length;render();}
+  function next(){idx=(idx+1)%group.length;render();}
+  imgs.forEach(function(im){im.addEventListener('click',function(e){e.stopPropagation();open(im);});});
+  lb.querySelector('.lb-close').addEventListener('click',close);
+  lb.querySelector('.lb-prev').addEventListener('click',function(e){e.stopPropagation();prev();});
+  lb.querySelector('.lb-next').addEventListener('click',function(e){e.stopPropagation();next();});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')prev();if(e.key==='ArrowRight')next();});
+})();
+</script>
 </body>
 </html>
