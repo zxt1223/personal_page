@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>郑栩婷 · 个人主页（桌面版）</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/images/3_140.webp">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 :root{
   --bg:#FBFAF7; --ink:#1A1A18; --ink-2:#3A3833; --muted:#6B6B66; --faint:#9A968D;
@@ -15,13 +14,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',-apple-system,system-ui,sans-serif;background:#ECEAE6;display:flex;justify-content:center;padding:40px 0;}
+body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:#ECEAE6;display:flex;justify-content:center;padding:40px 0;}
 .page{width:100%;max-width:1120px;background:var(--bg);overflow:hidden;margin:0 auto;}
 a{text-decoration:none;}
 
 /* Nav */
 .nav{height:72px;padding:0 64px;display:flex;align-items:center;justify-content:space-between;}
-.brand{font-family:'Fraunces';font-weight:600;font-size:18px;color:var(--ink);}
+.brand{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:600;font-size:18px;color:var(--ink);}
 .nav-menu{display:flex;gap:32px;}
 .nav-menu a{font-size:15px;color:#4A4843;}
 .nav-menu a:hover{color:var(--ink);}
@@ -31,8 +30,8 @@ a{text-decoration:none;}
 .hero{display:flex;gap:48px;padding:56px 64px;align-items:center;justify-content:space-between;}
 .hero-left{flex:1;display:flex;flex-direction:column;gap:20px;align-items:flex-start;}
 .eyebrow{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.hero-name{font-family:'Fraunces';font-weight:700;font-size:60px;color:var(--ink);line-height:1.05;}
-.hero-tagline{font-family:'Fraunces';font-weight:400;font-size:20px;color:var(--ink-2);}
+.hero-name{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:60px;color:var(--ink);line-height:1.05;}
+.hero-tagline{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:400;font-size:20px;color:var(--ink-2);}
 .hero-bio{font-size:16px;color:var(--muted);line-height:26px;max-width:540px;}
 .hero-cta{display:flex;gap:16px;align-items:center;}
 .cta-primary{background:var(--ink);color:var(--bg);padding:12px 24px;border-radius:999px;font-size:14px;font-weight:600;}
@@ -44,7 +43,7 @@ a{text-decoration:none;}
 .about{display:flex;flex-direction:column;gap:32px;padding:64px;}
 .about-left{width:auto;display:flex;flex-direction:column;gap:12px;align-items:flex-start;}
 .about-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.about-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.about-title{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:32px;color:var(--ink);}
 .about-right{width:100%;max-width:760px;display:flex;flex-direction:column;gap:24px;align-items:flex-start;}
 .about-text{font-size:18px;color:var(--ink-2);line-height:30px;font-weight:500;max-width:620px;}
 .skills{display:flex;flex-wrap:wrap;gap:12px;}
@@ -54,12 +53,12 @@ a{text-decoration:none;}
 .work{padding:64px;display:flex;flex-direction:column;gap:32px;}
 .work-header{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
 .work-kicker{font-size:13px;font-weight:600;color:var(--terracotta);letter-spacing:1px;}
-.work-title{font-family:'Fraunces';font-weight:700;font-size:32px;color:var(--ink);}
+.work-title{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:32px;color:var(--ink);}
 .work-grid{display:flex;gap:24px;}
 .proj{flex:1;display:flex;flex-direction:column;gap:16px;align-items:flex-start;}
 .proj-cover{width:100%;height:240px;border-radius:16px;overflow:hidden;background:var(--card);}
 .proj-cover img{width:100%;height:100%;object-fit:cover;display:block;}
-.proj-title{font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--ink);}
+.proj-title{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:20px;color:var(--ink);}
 .proj-meta{font-size:14px;color:var(--faint);}
 .proj-desc{font-size:15px;color:var(--muted);line-height:24px;}
 .proj-desc strong{color:var(--ink);font-weight:600;}
@@ -78,7 +77,7 @@ a{text-decoration:none;}
 /* Contact */
 .contact{background:var(--ink);padding:80px 64px;display:flex;flex-direction:column;gap:24px;align-items:center;}
 .contact-kicker{font-size:13px;font-weight:600;color:var(--peach);letter-spacing:1px;}
-.contact-title{font-family:'Fraunces';font-weight:700;font-size:48px;color:var(--bg);}
+.contact-title{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:48px;color:var(--bg);}
 .contact-items{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;}
 .contact-item{font-size:18px;color:#D8D4CC;text-decoration:none;transition:color .2s;}
 .contact-item:hover{color:var(--peach);}
@@ -87,7 +86,7 @@ a{text-decoration:none;}
 /* Stats */
 .stats{display:flex;gap:24px;padding:0 64px 64px;}
 .stat{flex:1;background:var(--card);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
-.stat-num{font-family:'Fraunces';font-weight:700;font-size:46px;color:var(--terracotta);line-height:1;}
+.stat-num{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:46px;color:var(--terracotta);line-height:1;}
 .stat-label{font-size:14px;color:var(--muted);}
 
 /* Skills matrix */
@@ -103,9 +102,9 @@ a{text-decoration:none;}
 .tl-item{display:flex;gap:24px;padding:0 0 32px 28px;position:relative;}
 .tl-item:last-child{padding-bottom:0;}
 .tl-item::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--terracotta);border:2px solid var(--bg);}
-.tl-year{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink);min-width:120px;flex-shrink:0;}
+.tl-year{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:600;font-size:15px;color:var(--ink);min-width:120px;flex-shrink:0;}
 .tl-body{display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
-.tl-h{font-family:'Fraunces';font-weight:700;font-size:18px;color:var(--ink);}
+.tl-h{font-family:'Fraunces',Georgia,'Times New Roman','Songti SC','STSong','SimSun',serif;font-weight:700;font-size:18px;color:var(--ink);}
 .tl-d{font-size:16px;color:var(--muted);line-height:26px;max-width:720px;}
 .tl-link{color:var(--terracotta);font-weight:600;}.tl-link:hover{text-decoration:underline;}
 
@@ -194,7 +193,7 @@ a{text-decoration:none;}
       </div>
     </div>
     <div class="hero-right">
-      <img class="zoomable" data-group="hero" src="assets/images/3_140.png" alt="郑栩婷">
+      <img class="zoomable" data-group="hero" fetchpriority="high" decoding="async" src="assets/images/3_140.webp" alt="郑栩婷">
     </div>
   </section>
 
@@ -333,10 +332,10 @@ a{text-decoration:none;}
         </div>
       </div>
       <div class="proj-gallery">
-        <img class="zoomable" data-group="pa" src="assets/images/pa-01-flow.png" alt="执行流程：7 个 Skill 串行闭环">
-        <img class="zoomable" data-group="pa" src="assets/images/pa-02-output.png" alt="真实产出：项目进度广播">
-        <img class="zoomable" data-group="pa" src="assets/images/pa-03-output-detail.png" alt="真实产出：任务到期明细">
-        <img class="zoomable" data-group="pa" src="assets/images/pa-04-dashboard.png" alt="指标看板：北极星与效率指标">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pa" src="assets/images/pa-01-flow.webp" alt="执行流程：7 个 Skill 串行闭环">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pa" src="assets/images/pa-02-output.webp" alt="真实产出：项目进度广播">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pa" src="assets/images/pa-03-output-detail.webp" alt="真实产出：任务到期明细">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pa" src="assets/images/pa-04-dashboard.webp" alt="指标看板：北极星与效率指标">
       </div>
     </div>
 
@@ -352,9 +351,9 @@ a{text-decoration:none;}
         </div>
       </div>
       <div class="proj-gallery">
-        <img class="zoomable" data-group="ba" src="assets/images/ba-01-preference.png" alt="偏好收集：肤质/预算/妆效">
-        <img class="zoomable" data-group="ba" src="assets/images/ba-02-shade.png" alt="色号咨询：冷暖皮判断">
-        <img class="zoomable" data-group="ba" src="assets/images/ba-03-recommend.png" alt="智能推荐：多轮对话后生成推荐">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="ba" src="assets/images/ba-01-preference.webp" alt="偏好收集：肤质/预算/妆效">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="ba" src="assets/images/ba-02-shade.webp" alt="色号咨询：冷暖皮判断">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="ba" src="assets/images/ba-03-recommend.webp" alt="智能推荐：多轮对话后生成推荐">
       </div>
     </div>
 
@@ -369,9 +368,9 @@ a{text-decoration:none;}
         </div>
       </div>
       <div class="proj-gallery">
-        <img class="zoomable" data-group="pm" src="assets/images/pm-01-taskboard.png" alt="任务管理与日报看板">
-        <img class="zoomable" data-group="pm" src="assets/images/pm-02-tools.png" alt="工具应用与 AI 资讯聚合">
-        <img class="zoomable" data-group="pm" src="assets/images/pm-03-jobs.png" alt="求职贴岗位情报聚合">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pm" src="assets/images/pm-01-taskboard.webp" alt="任务管理与日报看板">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pm" src="assets/images/pm-02-tools.webp" alt="工具应用与 AI 资讯聚合">
+        <img class="zoomable" loading="lazy" decoding="async" data-group="pm" src="assets/images/pm-03-jobs.webp" alt="求职贴岗位情报聚合">
       </div>
     </div>
 
